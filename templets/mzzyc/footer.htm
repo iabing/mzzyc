@@ -1,0 +1,106 @@
+<div class="footer">
+    <div class="ftop clearfix">
+        <dl>
+            <dt>联系我们</dt>
+            <dd>联系人：雷先生</dd>
+            <dd>电话：0817-256525</dd>
+            <dd>手机：13830238999</dd>
+            <dd>QQ: 249755497</dd>
+            <dd>地址：岷县当归城仓储区1号</dd>
+        </dl>
+        <p class="fsline fmargin1"></p>
+        <dl class="fmargin2">
+            <dt>网站地图</dt>
+            <dd>
+                <a href="">网站首页</a><a href=""></a>
+                <a href="">网站首页</a><a href=""></a>
+                <a href="">网站首页</a><a href=""></a>
+                <a href="">网站首页</a><a href=""></a>
+            </dd>
+            <dd>
+                <a href="">网站首页</a><a href=""></a>
+                <a href="">网站首页</a><a href=""></a>
+                <a href="">网站首页</a><a href=""></a>
+                <a href="">网站首页</a><a href=""></a>
+            </dd>
+            <dd>
+                <a href="">网站首页</a><a href=""></a>
+                <a href="">网站首页</a><a href=""></a>
+                <a href="">网站首页</a><a href=""></a>
+                <a href="">网站首页</a><a href=""></a>
+            </dd>
+            <dd>
+                <a href="">网站首页</a><a href=""></a>
+                <a href="">网站首页</a><a href=""></a>
+                <a href="">网站首页</a><a href=""></a>
+                <a href="">网站首页</a><a href=""></a>
+            </dd>
+        </dl>
+        <p class="fsline fmargin3"></p>
+        <dl class="fmargin4">
+            <dd><p class="ferweima"></p></dd>
+        </dl>
+    </div>
+    <div class="fbottom">Copyright © 2014 岷州中药材销售有限公司　版权所有　All rights reserved　陇ICP备14001276号-1 　技术支持：
+        <a href="">炳煌科技</a>
+    </div>
+</div>
+<div id="leftsead">
+  <ul>
+    <li><a href="" target="_blank"> <img src="images/ll01.png" width="131" height="49" class="hides" /><img src="images/l01.png" width="47" height="49" class="shows" /></a></li>
+    <li><a href="" target="_blank"> <img src="images/ll03.png" width="131" height="49" class="hides" /><img src="images/l03.png" width="47" height="49" class="shows" /></a></li>
+    <li><a href="http://wp.qq.com/wpa/qunwpa?idkey=47d9817e9e09f61b288b8ad6d33fb18cbd659ca6773f663918d6e5d3a2981a12"> <img src="images/ll04.png" width="131" height="49" class="hides" /><img src="images/l04.png" width="47" height="49" class="shows" /></a></li>
+    <li><a id="c_btn"> <img src="images/ll05.png" width="131" height="49" class="hides" /><img src="images/l05.png" width="47" height="49" class="shows" /></a></li>
+    <li><a id="top_btn"> <img src="images/ll06.png" width="131" height="49" class="hides" /><img src="images/l06.png" width="47" height="49" class="shows" /></a></li>
+  </ul>
+</div>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery-1.7.2.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.flexslider-min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('.flexslider').flexslider({
+            directionNav: false,
+            pauseOnAction: false
+        });
+        jQuery(".txtMarquee-top").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:5,interTime:50});
+        jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
+        jQuery(".picScroll-left").slide({mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:4,trigger:"click",pnLoop:false});
+        //内容切换
+        $('p.box-hp span').each(function(){
+            $(this).mouseenter(function(){
+                var num = $(this).index();
+                var op = $(this).parent().parent().siblings('div');
+                $(this).siblings().removeClass('curboxhp');
+                $(this).addClass('curboxhp');
+                op.hide();
+                op.eq(num).show();
+            });
+        });
+        //xuanfu
+        $("#leftsead a").hover(function () {
+            if ($(this).prop("className") == "youhui") {
+
+                $(this).children("img.hides").animate({ width: '145px', height: '343px', top: '2px' }, 600);
+            } else {
+                $(this).children("img.hides").show();
+
+                $(this).children("img.hides").animate({ marginRight: '0px' }, 'slow');
+                $(this).children("img.shows").animate({ width: '0px' }, 200);
+            }
+        }, function () {
+            if ($(this).prop("className") == "youhui") {
+
+                $(this).children("img.hides").animate({ width: '0', height: '0', top: '150px' }, 600);
+            } else {
+                $(this).children("img.hides").animate({ marginRight: '-143px' }, 'slow', function () {
+                    $(this).hide();
+                    $(this).next("img.shows").animate({ width: '47px' }, 200);
+                });
+            }
+        });
+        $("#top_btn").click(function () { if (scroll == "off") return; $("html,body").animate({ scrollTop: 0 }, 600); });
+        $("#c_btn").click(function () { if (scroll == "off") return; $("html,body").animate({ scrollTop: 2694 }, 600); });
+    });
+</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"2","bdPos":"left","bdTop":"190"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
